@@ -31,7 +31,11 @@ def main():
     run("simulate_two_leaf.py")
     run("simulate_larger_trees.py")
     run("sensitivity_experiments.py")
-    run("real_data_experiments.py")
+    run(
+        "real_data_experiments.py",
+        "--dataset-snapshot",
+        str(ROOT / "used_data"),
+    )
 
 
 if __name__ == "__main__":

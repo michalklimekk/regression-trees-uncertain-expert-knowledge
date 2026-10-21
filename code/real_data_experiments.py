@@ -39,7 +39,7 @@ from simulation_utils import (
 )
 from stability_diagnostics import deletion_stability
 from uetree import UncertainExpertRegressionTree, aggregate_expert_votes, soft_calibrate
-
+from dataset_snapshots import load_processed_datasets
 
 @dataclass(frozen=True)
 class DatasetSpec:
@@ -784,11 +784,17 @@ def main():
     parser.add_argument("--data-home", type=Path, default=Path("data_cache"))
     parser.add_argument("--repetitions", type=int, default=30)
     parser.add_argument("--seed", type=int, default=20260915)
+    parser.add_argument("--dataset-snapshot", type=Path, default=None)
     args = parser.parse_args()
     args.results.mkdir(parents=True, exist_ok=True)
     args.figures.mkdir(parents=True, exist_ok=True)
 
-    specs = load_datasets(args.data_home)
+
+    specs = (
+        load_processed_datasets(args.dataset_snapshot)
+        if args.dataset_snapshot is not None
+        else load_datasets(args.data_home)
+    )
     panel_settings = [
         ("reliable", 0.10, 0.05),
         ("uncertain", 0.30, 0.20),
