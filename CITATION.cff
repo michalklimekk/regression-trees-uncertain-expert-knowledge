@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite this repository."
+title: "Regression Trees with Uncertain Expert Knowledge: Reproducibility Materials"
+type: software
+
+authors:
+  - family-names: Klimek
+    given-names: Michał
+  - family-names: Jastrzębska
+    given-names: Agnieszka
+
+repository-code: "https://github.com/michalklimekk/regression-trees-uncertain-expert-knowledge"
+
+keywords:
+  - regression trees
+  - expert knowledge
+  - informed machine learning
+  - uncertainty
+  - reproducibility
