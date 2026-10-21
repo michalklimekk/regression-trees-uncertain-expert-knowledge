@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "description": "Post-preprocessing covariates and response, before train/validation/test splitting.",
+  "not_raw_source_data": true,
+  "processing": "Exact DatasetSpec arrays from real_data_experiments.load_datasets.",
+  "environment": {
+    "python": "3.12.4",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "2.0.0",
+    "pandas": "2.2.2",
+    "scipy": "1.14.0",
+    "sklearn": "1.5.1",
+    "statsmodels": "0.14.2",
+    "matplotlib": "3.9.1",
+    "pyarrow": "24.0.0"
+  },
+  "datasets": [
+    {
+      "name": "diabetes",
+      "file": "diabetes.parquet",
+      "sha256": "7988e707e2ae116a91196a1ea8b5fca1858aecae47dc7ee13191e09847610f47",
+      "n_observations": 442,
+      "n_features": 10,
+      "feature_names": [
+        "age",
+        "sex",
+        "bmi",
+        "bp",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "directions": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "min_leaf": 12,
+      "source": {
+        "provider": "scikit-learn",
+        "dataset": "load_diabetes",
+        "documentation": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_diabetes.html",
+        "target": "target"
+      }
+    },
+    {
+      "name": "engel",
+      "file": "engel.parquet",
+      "sha256": "1bc949212702afb103c9b3b04501d8528b2d7d12553b0cf20ab49b1d9f07e1f3",
+      "n_observations": 235,
+      "n_features": 1,
+      "feature_names": [
+        "income"
+      ],
+      "directions": [
+        1
+      ],
+      "min_leaf": 10,
+      "source": {
+        "provider": "statsmodels",
+        "dataset": "statsmodels.datasets.engel",
+        "documentation": "https://www.statsmodels.org/stable/datasets/generated/engel.html",
+        "target": "foodexp"
+      }
+    },
+    {
+      "name": "concrete",
+      "file": "concrete.parquet",
+      "sha256": "5c6e44b6ba9ba738954242241cac534f11f8f745de613d819aa3c6b9965a7269",
+      "n_observations": 1030,
+      "n_features": 8,
+      "feature_names": [
+        "cement",
+        "blast_furnace_slag",
+        "fly_ash",
+        "water",
+        "superplasticizer",
+        "coarse_aggregate",
+        "fine_aggregate",
+        "age"
+      ],
+      "directions": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "min_leaf": 15,
+      "source": {
+        "provider": "OpenML",
+        "data_id": 44959,
+        "documentation": "https://www.openml.org/d/44959",
+        "target": "strength"
+      }
+    },
+    {
+      "name": "abalone",
+      "file": "abalone.parquet",
+      "sha256": "7f1c5d19a55b153829861d8c1c1dbe61efc67df3c21b7656e1b61082880e19c1",
+      "n_observations": 4177,
+      "n_features": 10,
+      "feature_names": [
+        "Length",
+        "Diameter",
+        "Height",
+        "Whole_weight",
+        "Shucked_weight",
+        "Viscera_weight",
+        "Shell_weight",
+        "Sex_F",
+        "Sex_I",
+        "Sex_M"
+      ],
+      "directions": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "min_leaf": 20,
+      "source": {
+        "provider": "OpenML",
+        "data_id": 183,
+        "documentation": "https://www.openml.org/d/183",
+        "target": "Class_number_of_rings"
+      }
+    },
+    {
+      "name": "red_wine",
+      "file": "red_wine.parquet",
+      "sha256": "cd00a306e74785050c3de989858e0277dcf6656d51fe848fb2b8a00102cf7e9a",
+      "n_observations": 1599,
+      "n_features": 11,
+      "feature_names": [
+        "fixed acidity",
+        "volatile acidity",
+        "citric acid",
+        "residual sugar",
+        "chlorides",
+        "free sulfur dioxide",
+        "total sulfur dioxide",
+        "density",
+        "pH",
+        "sulphates",
+        "alcohol"
+      ],
+      "directions": [
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "min_leaf": 15,
+      "source": {
+        "provider": "OpenML",
+        "data_id": 42184,
+        "documentation": "https://www.openml.org/d/42184",
+        "target": "quality"
+      }
+    },
+    {
+      "name": "white_wine",
+      "file": "white_wine.parquet",
+      "sha256": "58e699d65725a559216b1f5f633ef3839611852f063399dcd071411c86ed56b3",
+      "n_observations": 4898,
+      "n_features": 11,
+      "feature_names": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11"
+      ],
+      "directions": [
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "min_leaf": 20,
+      "source": {
+        "provider": "OpenML",
+        "data_id": 40498,
+        "documentation": "https://www.openml.org/d/40498",
+        "target": "Class"
+      }
+    },
+    {
+      "name": "auto_mpg",
+      "file": "auto_mpg.parquet",
+      "sha256": "f77e61a506af84d17b95f31d4b4f3312b9eb6b6005864dfa57c53417ff9a7208",
+      "n_observations": 392,
+      "n_features": 7,
+      "feature_names": [
+        "cylinders",
+        "displacement",
+        "horsepower",
+        "weight",
+        "acceleration",
+        "year",
+        "origin"
+      ],
+      "directions": [
+        0,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "min_leaf": 10,
+      "source": {
+        "provider": "Rdatasets / ISLR",
+        "dataset": "Auto",
+        "documentation": "https://vincentarelbundock.github.io/Rdatasets/csv/ISLR/Auto.csv",
+        "target": "mpg"
+      }
+    },
+    {
+      "name": "windsor",
+      "file": "windsor.parquet",
+      "sha256": "e89030503e7215b92e7d62ab5f41b7ea0fe1061ae2a1cc2d182d5b31f54b345d",
+      "n_observations": 546,
+      "n_features": 17,
+      "feature_names": [
+        "lotsize",
+        "bedrooms",
+        "bathrms",
+        "stories",
+        "garagepl",
+        "driveway_no",
+        "driveway_yes",
+        "recroom_no",
+        "recroom_yes",
+        "fullbase_no",
+        "fullbase_yes",
+        "gashw_no",
+        "gashw_yes",
+        "airco_no",
+        "airco_yes",
+        "prefarea_no",
+        "prefarea_yes"
+      ],
+      "directions": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_leaf": 10,
+      "source": {
+        "provider": "Rdatasets / Ecdat",
+        "dataset": "Housing",
+        "documentation": "https://vincentarelbundock.github.io/Rdatasets/csv/Ecdat/Housing.csv",
+        "target": "price"
+      }
+    }
+  ]
+}

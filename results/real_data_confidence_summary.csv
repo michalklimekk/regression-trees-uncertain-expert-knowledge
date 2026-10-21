@@ -1,0 +1,17 @@
+dataset,panel,mean_featurewise_confidence
+diabetes,reliable,0.5115078786508794
+diabetes,uncertain,0.11393618964066159
+engel,reliable,0.485006545792564
+engel,uncertain,0.08929491227168457
+concrete,reliable,0.5090039544633099
+concrete,uncertain,0.0950794361344787
+abalone,reliable,0.5093143133844029
+abalone,uncertain,0.10193316332337153
+red_wine,reliable,0.5204514622001313
+red_wine,uncertain,0.09555763086139042
+white_wine,reliable,0.4971019644046175
+white_wine,uncertain,0.10110866654918196
+auto_mpg,reliable,0.5290927220922437
+auto_mpg,uncertain,0.10521868944201314
+windsor,reliable,0.5238647805660668
+windsor,uncertain,0.10101863986980333

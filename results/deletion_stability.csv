@@ -1,0 +1,24 @@
+dataset,predictor,reference_direction,modal_stump_direction,stability
+diabetes,bmi,1,1,1.0
+diabetes,bp,1,1,1.0
+diabetes,s3,-1,-1,1.0
+diabetes,s5,1,1,1.0
+engel,income,1,1,1.0
+concrete,cement,1,1,1.0
+concrete,age,1,1,1.0
+abalone,Length,1,1,1.0
+abalone,Diameter,1,1,1.0
+abalone,Height,1,1,1.0
+abalone,Shell_weight,1,1,1.0
+red_wine,volatile acidity,-1,-1,1.0
+red_wine,citric acid,1,1,1.0
+red_wine,sulphates,1,1,1.0
+red_wine,alcohol,1,1,1.0
+white_wine,V2,-1,-1,1.0
+white_wine,V3,1,1,1.0
+white_wine,V10,1,1,1.0
+white_wine,V11,1,1,1.0
+auto_mpg,displacement,-1,-1,1.0
+auto_mpg,horsepower,-1,-1,1.0
+auto_mpg,weight,-1,-1,1.0
+windsor,lotsize,1,1,1.0
